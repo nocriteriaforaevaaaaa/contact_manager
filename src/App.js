@@ -1,6 +1,7 @@
 import React from "react";
 import Contact from "./Components/Contact";
 import "./styles/app.css";
+import Wrapper from "./Wrapper";
 
 const App = () => {
   const contacts = [
@@ -23,14 +24,19 @@ const App = () => {
     },
   ];
 
+  // const myStyle = {
+  //   color: "grey",
+  //   background: "brown",
+  //   borderRadius: "10px",
+  // };
+
   return (
     <>
-      <div className="container">
-        <h3>Contact List</h3>
+      <Wrapper>
         <Contact data={contacts[0]} />
         <Contact data={contacts[1]} />
         <Contact data={contacts[2]} />
-      </div>
+      </Wrapper>
     </>
   );
 };
